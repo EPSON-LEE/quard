@@ -1,5 +1,5 @@
 module.exports = {
-  // base: 'docs/.vuepress/config.js',
+  base: '/quard/',
   title: 'superYipe',
   description: 'Just playing around',
   repo: 'https://github.com/txs1992/mt-blog', // 添加 github 链接
