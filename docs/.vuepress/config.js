@@ -10,8 +10,8 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
+      { text: '翻译', link: '/translate/' },
       { text: 'Guide', link: '/guide/' },
-      { text: 'Test', link: '/test/' },
       { text: 'External', link: 'https://google.com' },
       {
         text: 'github',
@@ -28,9 +28,9 @@ module.exports = {
         'one',
         'two'
       ],
-      '/test/': [
+      '/translate/': [
         'three',
-        'four'
+        'four',
       ]
     }
   },
