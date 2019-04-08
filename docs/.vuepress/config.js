@@ -1,13 +1,14 @@
 module.exports = {
   base: '/quard/',
-  title: 'superYipe',
-  description: 'Just playing around',
-  repo: 'https://github.com/txs1992/mt-blog', // 添加 github 链接
+  title: ' ',
+  description: 'Take Your Time',
+  repo: 'https://github.com/EPSON-LEE', // 添加 github 链接
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],
   port:65,
   themeConfig: {
+    lastUpdated: 'Last Updated', // string | boolean
     nav: [
       { text: 'Home', link: '/' },
       { text: '翻译', link: '/translate/' },
@@ -17,8 +18,7 @@ module.exports = {
         text: 'github',
         // 这里是下拉列表展现形式。
         items: [
-          { text: 'focus-outside', link: 'https://github.com/txs1992/focus-outside' },
-          { text: 'stylus-converter', link: 'https://github.com/txs1992/stylus-converter' }
+          { text: 'superYipe', link: 'https://github.com/EPSON-LEE' }
         ]
       }
     ],
@@ -32,6 +32,14 @@ module.exports = {
         'three',
         'four',
       ]
+    },
+    serviceWorker: {
+      updatePopup: true // Boolean | Object, 默认值是 undefined.
+      // 如果设置为 true, 默认的文本配置将是: 
+      // updatePopup: { 
+      //    message: "New content is available.", 
+      //    buttonText: "Refresh" 
+      // }
     }
   },
   configureWebpack: (config, isServer) => {

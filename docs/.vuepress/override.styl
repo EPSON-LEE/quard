@@ -1,0 +1,33 @@
+$accentColor = #3eaf7c // 主题色
+$textColor = #2c3e50 // 文字颜色
+$borderColor = #eaecef // 边框颜色
+$codeBgColor = #282c34 // 代码背景颜色
+
+// 自定义home-page类
+
+.home-page {
+  @media (min-width: 419px) {
+    .home .hero img {
+      max-height: 600px;
+      margin: 2rem auto 1.2rem;
+    }
+  }
+
+  @media (max-width: 419px) {
+    .home .hero img {
+      max-height: 400px;
+      margin: 2rem auto 1.2rem;
+    }
+  }
+
+  .description {
+    font-family: "Libre Baskerville",Libre,Georgia,Times,serif;
+    line-height: 1.75;
+    font-size: 1rem;
+    font-style: italic;
+    cursor: pointer;
+    word-wrap: break-word;
+    // font
+  }
+
+}
