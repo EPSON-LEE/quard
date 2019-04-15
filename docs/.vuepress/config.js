@@ -11,8 +11,9 @@ module.exports = {
     lastUpdated: 'Last Updated', // string | boolean
     nav: [
       { text: 'Home', link: '/' },
-      { text: '翻译', link: '/translate/' },
+      { text: 'Translation', link: '/translate/' },
       { text: 'Guide', link: '/guide/' },
+      { text: 'Book', link: '/book/' },
       { text: 'External', link: 'https://google.com' },
       {
         text: 'github',
@@ -31,6 +32,9 @@ module.exports = {
       '/translate/': [
         'three',
         'four',
+      ],
+      '/bookList/': [
+        'five'
       ]
     },
     serviceWorker: {
