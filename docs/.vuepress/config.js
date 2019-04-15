@@ -1,7 +1,7 @@
 module.exports = {
   base: '/quard/',
   title: ' ',
-  description: 'Take Your Time',
+  description: 'Take Your Sweet Time',
   repo: 'https://github.com/EPSON-LEE', // 添加 github 链接
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
