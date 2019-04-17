@@ -1,1 +1,2 @@
-# Guide Page
+# Functional-light Programming
+
