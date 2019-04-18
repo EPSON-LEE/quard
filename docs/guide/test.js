@@ -172,6 +172,35 @@ function combineFirstTwo([ v1, v2 ]) {
         
 [1,2,3,4,5].reduce( gatherArgs( combineFirstTwo ) );
 
+// var pipe = 
 
+class utils {
+  constructor(value = 1) {
+    this._temp = value
+  }
 
+  add(value = 0) {
+    this._temp = this._temp + value 
+    return this
+  }
 
+  sub(vaue = 0) {
+    this._temp = this._temp - value 
+    return this
+  }
+
+  multiplication(value = 1) {
+    this._temp = this._temp * value 
+    return this
+  }
+  divide(value = 1) {
+    this._temp = this._temp / value 
+    return this
+  }
+  conclusion() {
+    return this._temp
+  }
+}
+var test = new utils(3)
+
+test.add(3).add(3).multiplication(4).conclusion()
