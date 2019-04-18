@@ -53,11 +53,11 @@ function sum(x,y) { return x + y; }
 function constructMsg(v) { return `The magic number is: ${v}`; }
 ```
 
-## Function Input
+### Function Input
 
-## Defaulting Parameters
+### Defaulting Parameters
 
-## Counting Inputs
+### Counting Inputs
 
 a function with arity 1 is also called "unary", a function width arity 2 is also called "binary", and a function with arity 3 or higher is called "n-ary"
 
@@ -72,7 +72,7 @@ foo( 1, 2, 3, 4 );      // 1 2 3 [ 4 ]
 foo( 1, 2, 3, 4, 5 );   // 1 2 3 [ 4, 5 ]
 ```
 
-## Parameter Destructing
+### Parameter Destructing
 
 ```
 function foo() {
@@ -80,3 +80,83 @@ function foo() {
 }
 foo(...[1, 2, 3])
 ```
+
+## Chapter 3: Managing Function Inputs
+
+
+### All for One
+
+function unary(fn) {
+  return funtion onlyOneArg(arg) {
+    return fn(arg)
+  }
+}
+
+### One On One
+
+> There are no small parts, only small actors
+
+### unchanging One
+
+```
+function constant(v) {
+  return function() {
+    return v
+  }
+}
+
+// or the ES6 => form
+var constant =
+    v =>
+      () =>
+        v
+```
+
+### Adapting Arguments to Parameters
+
+```
+// split Array -> parameters
+function foo(x,y) {
+  console.log( x + y );
+}
+
+function bar(fn) {
+  fn( [ 3, 9 ] );
+}
+
+function spreadArgs(fn) {
+  return function spreadFn(argsArr) {
+    return fn(...argsArr)
+  }
+}
+
+bar(spreadArgs(foo))
+
+var spreadArgs =
+    fn =>
+      argsArr =>
+        fn(...argsArr)
+
+// gather paraments -> array
+function gatherArgs(fn) {
+  return function gatheredFn(...argsArr) {
+    return fn(argsArr)
+  }
+}
+
+// or the ES6 => arrows form
+
+var gatherArgs =
+    fn => 
+      (...argsArr) =>
+        fn(argsArr)
+
+
+function combineFirstTwo([ v1, v2 ]) {
+  return v1 + v2;
+}
+        
+[1,2,3,4,5].reduce( gatherArgs( combineFirstTwo ) );
+
+```
+### Some Now, Some Later

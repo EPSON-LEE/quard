@@ -1,7 +1,7 @@
 module.exports = {
   base: '/quard/',
   title: ' ',
-  description: 'Take Your Sweet Time',
+  description: 'pipe = (...fns) => x => fns.reduce((v, f) => f(v), x)',
   repo: 'https://github.com/EPSON-LEE', // 添加 github 链接
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
