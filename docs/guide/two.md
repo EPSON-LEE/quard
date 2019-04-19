@@ -8,6 +8,8 @@
 
 *[React Gatsby 初步尝试后感觉相对比vue press而言有更丰富的文档和更高的自由度](https://www.gatsbyjs.org "Title")*
 
+*[React 360 VR](https://facebook.github.io/react-360/ "Title")*
+
 ## Programming pattern
 
 *[React Gatsby 初步尝试后感觉相对比vue press而言有更丰富的文档和更高的自由度](https://www.gatsbyjs.org "Title")*
