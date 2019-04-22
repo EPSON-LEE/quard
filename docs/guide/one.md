@@ -1,5 +1,7 @@
 # Functional-Light JavaScript
 
+a function with arity 1 is also called "unary", a function with arity 2 is also called "binary", and a function with arity 3 or higher is called "n-ary".
+
 Prcedure oriented style
 ```
 var numbers = [4, 10, 0, 27, 42, 17, 15, -6, 58]
@@ -160,3 +162,48 @@ function combineFirstTwo([ v1, v2 ]) {
 
 ```
 ### Some Now, Some Later
+
+## Composing Functions
+
+compose function evolution
+
+
+```
+function compose(fn1, fn2) {
+  return composed(value) {
+    return fn1(fn2(value))
+  }
+}
+```
+
+self defined compose function we could call it right-partial 
+```
+var compose =
+  (...fns) => 
+    result => {
+      var list = [...fns]
+      while(list.length > 0) {
+        result = list.pop()(result)
+      }
+      return result
+    }
+
+function a(value) {
+  return value + '1'
+}
+
+function b(value) {
+  return value + '2'
+}
+
+function c(value) {
+  return value + '3'
+}
+
+var test2 = compose(a, b, c)
+
+test2(0)
+```
+
+
+composition is helpful even if there's only one occurrence of something

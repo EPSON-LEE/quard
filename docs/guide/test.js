@@ -204,3 +204,52 @@ class utils {
 var test = new utils(3)
 
 test.add(3).add(3).multiplication(4).conclusion()
+
+// chapter 4 composing functions
+
+var a = fn => args => fn(args)
+
+// aritray compose
+function compose(fn1, fn2) {
+  return function composed(values) {
+    return fn1(fn2(values))
+  }
+}
+
+// general compose
+
+function compose(...fns) {
+  return function composed(result) {
+    var list = [...fns]
+    while(list.length > 0) {
+      result = list.pop()(result)
+    }
+    return result
+  }
+}
+
+var compose =
+  (...fns) => 
+    result => {
+      var list = [...fns]
+      while(list.length > 0) {
+        result = list.pop()(result)
+      }
+      return result
+    }
+
+function a(value) {
+  return value + '1'
+}
+
+function b(value) {
+  return value + '2'
+}
+
+function c(value) {
+  return value + '3'
+}
+
+var test2 = compose(a, b, c)
+
+test2(0)
