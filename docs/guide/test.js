@@ -271,3 +271,20 @@ c = [a, b].reduce((accu = [], cur) => {
 // a.filter(x => b.some(y => y.a === x.a))
 
 // 获取两组对象数组的交集
+
+function compose(fns) {
+  debugger
+  return function composed(result) {
+    var list = [...fns]
+    while (list.length > 0) {
+      result = list.pop()(result)
+    }
+    return result
+  }
+}
+
+var f = compose(
+  x => x / 3,
+  x => x + 1,
+  x => x * 2
+)

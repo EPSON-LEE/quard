@@ -310,15 +310,17 @@ function compose(...fns) {
 
 ```
 function compose(...fns) {
-    return function composed(result){
-        while (fns.length > 0) {
-            // take the last function off the end of the list
-            // and execute it
-            result = fns.pop()( result );
-        }
+  return function composed(result){
+  var list = [...fns]
 
-        return result;
-    };
+      while (list.length > 0) {
+          // take the last function off the end of the list
+          // and execute it
+          result = list.pop()( result );
+      }
+
+      return result;
+  };
 }
 
 var f = compose( x => x / 3, x => x + 1, x => x * 2 );
@@ -327,3 +329,7 @@ f( 4 );     // 3
 
 f( 4 );     // 4 <-- uh oh!
 ```
+
+## closure and Object
+
+Closures are a poor man's object hhh
