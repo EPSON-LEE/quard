@@ -17,9 +17,9 @@
 # code formatter tools
 
 - [x] premitter 个人推崇代码就像树一样 纵向生长
-- [] ESLint
-- [] editorconfig
-- [] jshint
+- [x] ESLint vue-cli3.0中 配合 vscode 进行code formatter
+- [] editorconfig 编辑器格式统一工具
+- [] jshint 文档生成工具
 
 # new trends
 

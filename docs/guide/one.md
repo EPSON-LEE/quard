@@ -207,3 +207,6 @@ test2(0)
 
 
 composition is helpful even if there's only one occurrence of something
+
+## reduce side effect
+
