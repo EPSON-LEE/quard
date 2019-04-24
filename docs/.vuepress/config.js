@@ -3,7 +3,7 @@ module.exports = {
   title: ' ',
   description: 'pipe = (...fns) => x => fns.reduce((v, f) => f(v), x)',
   repo: 'https://github.com/EPSON-LEE', // 添加 github 链接
-  head: [['link', { rel: 'icon', href: '/pic.jpeg' }]],
+  head: [['link', { rel: 'icon', href: '/logo.png' }]],
   port: 65,
   themeConfig: {
     lastUpdated: 'Last Updated', // string | boolean
@@ -22,7 +22,7 @@ module.exports = {
     ],
     // 为以下路由添加侧边栏
     sidebar: {
-      '/article/': ['map'],
+      '/article/': ['one'],
       '/guide/': ['one', 'two'],
       '/translate/': ['three', 'four'],
       '/bookList/': ['five']
