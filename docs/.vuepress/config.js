@@ -3,7 +3,7 @@ module.exports = {
   title: ' ',
   description: 'pipe = (...fns) => x => fns.reduce((v, f) => f(v), x)',
   repo: 'https://github.com/EPSON-LEE', // 添加 github 链接
-  head: [['link', { rel: 'icon', href: '/logo.png' }]],
+  head: [['link', { rel: 'icon', href: '/logo.jpeg' }]],
   port: 65,
   themeConfig: {
     lastUpdated: 'Last Updated', // string | boolean
@@ -13,7 +13,7 @@ module.exports = {
       { text: 'Guide', link: '/guide/' },
       { text: 'Book', link: '/book/' },
       { text: 'Article', link: '/article/' },
-      // { text: 'External', link: 'https://google.com' },
+      // { text: 'External', link: 'https://google.cxom' },
       {
         text: 'github',
         // 这里是下拉列表展现形式。
@@ -22,7 +22,7 @@ module.exports = {
     ],
     // 为以下路由添加侧边栏
     sidebar: {
-      '/article/': ['one'],
+      '/article/': ['map'],
       '/guide/': ['one', 'two'],
       '/translate/': ['three', 'four'],
       '/bookList/': ['five']
