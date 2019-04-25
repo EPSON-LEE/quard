@@ -11,7 +11,7 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: 'Translation', link: '/translate/' },
       { text: 'Guide', link: '/guide/' },
-      { text: 'Book', link: '/book/' },
+      { text: 'Todo', link: '/Todo/' },
       { text: 'Article', link: '/article/' },
       // { text: 'External', link: 'https://google.cxom' },
       {
@@ -23,9 +23,8 @@ module.exports = {
     // 为以下路由添加侧边栏
     sidebar: {
       '/article/': ['map'],
-      '/guide/': ['one', 'two'],
-      '/translate/': ['three', 'four'],
-      '/bookList/': ['five']
+      '/guide/': ['one'],
+      '/translate/': ['three', 'four']
     },
     serviceWorker: {
       updatePopup: true // Boolean | Object, 默认值是 undefined.

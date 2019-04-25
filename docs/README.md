@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /pic.jpg
+heroImage: /home.jpg
 pageClass: home-page
 # actionText: 快速上手 →
 # actionLink: /zh/guide/
