@@ -35,8 +35,12 @@
 
 # 解放生产力 Tools changed our life
 
-- [x] *[github gist](https://link.zhihu.com/?target=http%3A//www.labnol.org/internet/github-gist-tutorial/28499/ "Title")*
+- [x] *[github gist 搭配 vscode 一个插件用起来感觉还不错](https://link.zhihu.com/?target=http%3A//www.labnol.org/internet/github-gist-tutorial/28499/ "Title")*
+- [x] Bl.ocks上托管自己的GIST资源
 
+github: *[https://gist.github.com/EPSON-LEE/7be26eca228b92727afd75fe69b52782](https://gist.github.com/EPSON-LEE/7be26eca228b92727afd75fe69b52782/ "Title")*
+
+https://bl.ocks.org: *[https://bl.ocks.org/EPSON-LEE/7be26eca228b92727afd75fe69b52782](https://bl.ocks.org/EPSON-LEE/7be26eca228b92727afd75fe69b52782/ "Title")*
 # 性能优化
 
 - [] window.performance 实践经验少
