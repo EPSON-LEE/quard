@@ -4,6 +4,12 @@
 - [] 编译原理 -> AST
 - [] babel机制
 - [] webpack打包和前端工具的建设
+- [] node core
+
+# Node 工具
+
+- [] *[Apache HTTP server benchmarking tool](http://httpd.apache.org/docs/2.0/programs/ab.html)* ab -n 1000 -c 100  http://127.0.0.1:8999/
+
 
 # Book
 
@@ -19,7 +25,6 @@
 - [x] premitter 个人推崇代码就像树一样 纵向生长
 - [x] ESLint vue-cli3.0中 配合 vscode 进行code formatter
 - [x] editorconfig 编辑器格式统一工具 配合vscode editorConfig
-- [] jshint 文档生成工具
 
 # New trends
 
@@ -32,6 +37,7 @@
 
 - [x] travis.yml
 - [x] docker
+- [] esdoc jsdoc
 
 # 解放生产力 Tools changed our life
 
