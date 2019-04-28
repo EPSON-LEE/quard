@@ -288,3 +288,98 @@ var f = compose(
   x => x + 1,
   x => x * 2
 )
+
+// memoizeFunction
+
+function memoizeFunction(func) {
+  var cache = {}
+  return function() {
+    var key = arguments[0]
+    if (cache[key]) {
+      return cache[key]
+    } else {
+      var val = func.apply(this, arguments)
+      cache[key] = val
+      return val
+    }
+  }
+}
+
+var fibonacci = memoizeFunction(function(n) {
+  return n === 0 || n === 1 ? n : fibonacci(n - 1) + fibonacci(n - 2)
+})
+
+console.log(fibonacci(100))
+console.log(fibonacci(101))
+
+// 函数重载
+
+function addMethod(object, name, fn) {
+  var old = object[name]
+  object[name] = function() {
+    if (fn.length === arguments.length) {
+      return fn.apply(this, arguments)
+    } else if (typeof old === 'function') {
+      return old.apply(this, arguments)
+    }
+  }
+}
+
+/**
+ * 不传参数时
+ * @param {} a
+ * @param {*} b
+ * @param {*} opts
+ */
+function find0() {
+  return this.names
+}
+
+/**
+ * 传一个参数时
+ * @param {*} a
+ * @param {*} b
+ * @param {*} opts
+ */
+function find1(firstName) {
+  var result = []
+  for (var i = 0; i < this.names.length; i++) {
+    if (this.names[i].indexOf(firstName) === 0) {
+      result.push(this.names[i])
+    }
+  }
+  return result
+}
+
+/**
+ * 传两个参数时
+ * @param {*} a
+ * @param {*} b
+ * @param {*} opts
+ */
+function find2(firstName, lastName) {
+  var result = []
+  for (var i = 0; i < this.names.length; i++) {
+    if (this.names[i] === firstName + ' ' + lastName) {
+      result.push(this.names[i])
+    }
+  }
+  return result
+}
+
+var people = {
+  names: ['Dean Edwards', 'Alex Russell', 'Dean Tom']
+}
+
+addMethod(people, 'find', find0)
+addMethod(people, 'find', find1)
+addMethod(people, 'find', find2)
+
+function foo(a, b, opts) {
+  // ...
+  if (opts['test']) {
+  } //if test param exists, do something..
+}
+
+foo(1, 2, { method: 'add' })
+foo(3, 4, { test: 'equals', bar: 'tree' })

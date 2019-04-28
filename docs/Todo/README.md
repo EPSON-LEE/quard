@@ -49,6 +49,7 @@ github: *[https://gist.github.com/EPSON-LEE/7be26eca228b92727afd75fe69b52782](ht
 https://bl.ocks.org: *[https://bl.ocks.org/EPSON-LEE/7be26eca228b92727afd75fe69b52782](https://bl.ocks.org/EPSON-LEE/7be26eca228b92727afd75fe69b52782/ "Title")*
 # 性能优化
 
+- [x] 1、上cdn 2、分包 3、写法上的问题 
 - [] window.performance 实践经验少
 - [] 火焰图 早期有实践，还需挖掘
 - [] 降低工程的编译时间 缩短打包时间

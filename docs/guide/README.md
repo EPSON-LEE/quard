@@ -333,3 +333,8 @@ f( 4 );     // 4 <-- uh oh!
 ## closure and Object
 
 Closures are a poor man's object hhh
+
+## Memoization
+
+```
+```
