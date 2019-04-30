@@ -293,6 +293,7 @@ var f = compose(
 
 function memoizeFunction(func) {
   var cache = {}
+  debugger
   return function() {
     var key = arguments[0]
     if (cache[key]) {
@@ -383,3 +384,14 @@ function foo(a, b, opts) {
 
 foo(1, 2, { method: 'add' })
 foo(3, 4, { test: 'equals', bar: 'tree' })
+
+
+var x = {
+}
+
+console.log(x.y)
+debugger
+
+if (x === null || (x !== null && x.y !== null)) { 
+  console.log(1)
+}
