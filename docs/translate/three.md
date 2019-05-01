@@ -35,4 +35,4 @@
 这是如何影响到我的？醒悟，写越来越多的代码并没有让我成为一个更好的程序员。也许你需要知道这个秘诀，无论他是什么。
 
 
-原文来自： [*Medium Programming: doing it more vs doing it better*](https://kevinmartinjose.com/2019/04/08/programming-doing-it-more-vs-doing-it-better/)
+原文来自： [*hacker news -> Medium Programming: doing it more vs doing it better*](https://kevinmartinjose.com/2019/04/08/programming-doing-it-more-vs-doing-it-better/)

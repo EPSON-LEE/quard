@@ -385,13 +385,36 @@ function foo(a, b, opts) {
 foo(1, 2, { method: 'add' })
 foo(3, 4, { test: 'equals', bar: 'tree' })
 
-
-var x = {
-}
+var x = {}
 
 console.log(x.y)
 debugger
 
-if (x === null || (x !== null && x.y !== null)) { 
+if (x === null || (x !== null && x.y !== null)) {
   console.log(1)
+}
+
+function point(x1, y1) {
+  return function distinctFrom(x2, y2) {
+    return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2))
+  }
+}
+
+// tractEvent
+function trackEvent(
+  evt,
+  keyPresss = {
+    list() { return [] },
+    forEach() { }
+  }
+) { 
+  return function () {
+    list() { 
+      return [...keyPresss.list(), ...evt]
+    },
+    forEach(fn) { 
+      keyPresss.forEach(fn)
+      fn(evt)
+    }
+   }
 }
