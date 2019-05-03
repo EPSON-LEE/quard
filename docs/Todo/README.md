@@ -67,3 +67,17 @@ https://bl.ocks.org: *[https://bl.ocks.org/EPSON-LEE/7be26eca228b92727afd75fe69b
 ## Programming pattern
 
 - [x] *[Functional Programming](https://github.com/stoeffel/awesome-fp-js "Title")*
+
+## 文档建设
+
+- [x] vue press
+- [x] gatsby 文档更清晰、例子更多、更贴近react、更有成就感
+
+## 前端自动化
+
+- [] ali uform 号称可以解决表单配置化
+
+## 统一平台
+
+- [] sso
+- [] cmsproxy
