@@ -67,11 +67,15 @@ https://bl.ocks.org: *[https://bl.ocks.org/EPSON-LEE/7be26eca228b92727afd75fe69b
 ## Programming pattern
 
 - [x] *[Functional Programming](https://github.com/stoeffel/awesome-fp-js "Title")*
-
+- [x] this is a complete item
 ## 文档建设
 
 - [x] vue press
+
 - [x] gatsby 文档更清晰、例子更多、更贴近react、更有成就感
+1. typograph
+1. graphql
+1. hooks
 
 ## 前端自动化
 
