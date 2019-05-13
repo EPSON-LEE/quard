@@ -15,9 +15,12 @@ module.exports = {
       { text: 'Article', link: '/article/' },
       // { text: 'External', link: 'https://google.cxom' },
       {
-        text: 'github',
+        text: 'Contact me',
         // 这里是下拉列表展现形式。
-        items: [{ text: 'superYipe', link: 'https://github.com/EPSON-LEE' }]
+        items: [
+          { text: 'github', link: 'https://github.com/EPSON-LEE' },
+          { text: 'blog', link: 'https://epson-lee.github.io/genius/' }
+        ]
       }
     ],
     // 为以下路由添加侧边栏
