@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Functional-Light JavaScript |  </title>
+    <meta name="description" content="pipe = (...fns) =&gt; x =&gt; fns.reduce((v, f) =&gt; f(v), x)">
+    <link rel="icon" href="/quard/home.jpeg">
+    
+    <link rel="preload" href="/quard/assets/css/0.styles.5ea0502c.css" as="style"><link rel="preload" href="/quard/assets/js/app.eee176bf.js" as="script"><link rel="preload" href="/quard/assets/js/9.21eda8bb.js" as="script"><link rel="prefetch" href="/quard/assets/js/10.2c65a1df.js"><link rel="prefetch" href="/quard/assets/js/11.9f9e7478.js"><link rel="prefetch" href="/quard/assets/js/12.86c8f92a.js"><link rel="prefetch" href="/quard/assets/js/13.ad5b67ee.js"><link rel="prefetch" href="/quard/assets/js/14.7edf6ab8.js"><link rel="prefetch" href="/quard/assets/js/2.693828b8.js"><link rel="prefetch" href="/quard/assets/js/3.adbe240a.js"><link rel="prefetch" href="/quard/assets/js/4.5842cc4f.js"><link rel="prefetch" href="/quard/assets/js/5.c1a4a15b.js"><link rel="prefetch" href="/quard/assets/js/6.9e9168db.js"><link rel="prefetch" href="/quard/assets/js/7.e01adc3f.js"><link rel="prefetch" href="/quard/assets/js/8.02471b8f.js">
+    <link rel="stylesheet" href="/quard/assets/css/0.styles.5ea0502c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/quard/" class="home-link router-link-active"><!----> <span class="site-name"> </span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/quard/" class="nav-link">Home</a></div><div class="nav-item"><a href="/quard/translate/" class="nav-link">Translation</a></div><div class="nav-item"><a href="/quard/guide/" class="nav-link router-link-exact-active router-link-active">Guide</a></div><div class="nav-item"><a href="/quard/Todo/" class="nav-link">Todo</a></div><div class="nav-item"><a href="/quard/article/" class="nav-link">Article</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Contact me</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/EPSON-LEE" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://epson-lee.github.io/genius/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  blog
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/quard/" class="nav-link">Home</a></div><div class="nav-item"><a href="/quard/translate/" class="nav-link">Translation</a></div><div class="nav-item"><a href="/quard/guide/" class="nav-link router-link-exact-active router-link-active">Guide</a></div><div class="nav-item"><a href="/quard/Todo/" class="nav-link">Todo</a></div><div class="nav-item"><a href="/quard/article/" class="nav-link">Article</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Contact me</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/EPSON-LEE" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://epson-lee.github.io/genius/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  blog
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/quard/guide/one.html" class="sidebar-link">Functional-Light JavaScript</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="functional-light-javascript"><a href="#functional-light-javascript" aria-hidden="true" class="header-anchor">#</a> Functional-Light JavaScript</h1> <p>a function with arity 1 is also called &quot;unary&quot;, a function with arity 2 is also called &quot;binary&quot;, and a function with arity 3 or higher is called &quot;n-ary&quot;.</p> <p>Prcedure oriented style</p> <div class="language- extra-class"><pre class="language-text"><code>var numbers = [4, 10, 0, 27, 42, 17, 15, -6, 58]
+var faves = []
+var magicNumber = 0
+
+pickFavoriteNumbers()
+calculateMagicNumber()
+outputMsg()
+
+function calculateMagicNumber() {
+  for (let fave of faves) {
+    magicNumber = magicNumber + fave
+  }
+}
+
+function pickFavoriteNumbers() {
+  for (let num of numbers) {
+    if (num &gt; 10 &amp;&amp; num &lt;= 20) {
+      faves.push(num)
+    }
+  }
+}
+
+function outputMsg() {
+  var msg = `The magic number number is: ${magicNumber}`
+  console.log(msg)
+}
+
+</code></pre></div><p>Function oriented style</p> <div class="language- extra-class"><pre class="language-text"><code>var sumOnlyFavorites = FP.compose([
+  FP.filterReducer( FP.gte( 10 ) ),
+  FP.filterReducer( FP.lte( 20 ) )
+])(sum)
+
+var printMagicNumber = FP.pipe([
+  FP.reduce(sumOnlyFavorites, 0),
+  constructMsg,
+  console.log
+])
+
+var numbers = [4,10,0,27,42,17,15,-6,58];
+
+printMagicNumber( numbers );        // The magic number is: 42
+
+// ***************
+function sum(x,y) { return x + y; }
+function constructMsg(v) { return `The magic number is: ${v}`; }
+</code></pre></div><h3 id="function-input"><a href="#function-input" aria-hidden="true" class="header-anchor">#</a> Function Input</h3> <h3 id="defaulting-parameters"><a href="#defaulting-parameters" aria-hidden="true" class="header-anchor">#</a> Defaulting Parameters</h3> <h3 id="counting-inputs"><a href="#counting-inputs" aria-hidden="true" class="header-anchor">#</a> Counting Inputs</h3> <p>a function with arity 1 is also called &quot;unary&quot;, a function width arity 2 is also called &quot;binary&quot;, and a function with arity 3 or higher is called &quot;n-ary&quot;</p> <div class="language- extra-class"><pre class="language-text"><code>function foo(x,y,z, ...args) {
+  console.log(x, y, z, args)
+}
+
+foo();                  // undefined undefined undefined []
+foo( 1, 2, 3 );         // 1 2 3 []
+foo( 1, 2, 3, 4 );      // 1 2 3 [ 4 ]
+foo( 1, 2, 3, 4, 5 );   // 1 2 3 [ 4, 5 ]
+</code></pre></div><h3 id="parameter-destructing"><a href="#parameter-destructing" aria-hidden="true" class="header-anchor">#</a> Parameter Destructing</h3> <div class="language- extra-class"><pre class="language-text"><code>function foo() {
+  //...
+}
+foo(...[1, 2, 3])
+</code></pre></div><h2 id="chapter-3-managing-function-inputs"><a href="#chapter-3-managing-function-inputs" aria-hidden="true" class="header-anchor">#</a> Chapter 3: Managing Function Inputs</h2> <h3 id="all-for-one"><a href="#all-for-one" aria-hidden="true" class="header-anchor">#</a> All for One</h3> <p>function unary(fn) {
+return funtion onlyOneArg(arg) {
+return fn(arg)
+}
+}</p> <h3 id="one-on-one"><a href="#one-on-one" aria-hidden="true" class="header-anchor">#</a> One On One</h3> <blockquote><p>There are no small parts, only small actors</p></blockquote> <h3 id="unchanging-one"><a href="#unchanging-one" aria-hidden="true" class="header-anchor">#</a> unchanging One</h3> <div class="language- extra-class"><pre class="language-text"><code>function constant(v) {
+  return function() {
+    return v
+  }
+}
+
+// or the ES6 =&gt; form
+var constant =
+    v =&gt;
+      () =&gt;
+        v
+</code></pre></div><h3 id="adapting-arguments-to-parameters"><a href="#adapting-arguments-to-parameters" aria-hidden="true" class="header-anchor">#</a> Adapting Arguments to Parameters</h3> <div class="language- extra-class"><pre class="language-text"><code>// split Array -&gt; parameters
+function foo(x,y) {
+  console.log( x + y );
+}
+
+function bar(fn) {
+  fn( [ 3, 9 ] );
+}
+
+function spreadArgs(fn) {
+  return function spreadFn(argsArr) {
+    return fn(...argsArr)
+  }
+}
+
+bar(spreadArgs(foo))
+
+var spreadArgs =
+    fn =&gt;
+      argsArr =&gt;
+        fn(...argsArr)
+
+// gather paraments -&gt; array
+function gatherArgs(fn) {
+  return function gatheredFn(...argsArr) {
+    return fn(argsArr)
+  }
+}
+
+// or the ES6 =&gt; arrows form
+
+var gatherArgs =
+    fn =&gt; 
+      (...argsArr) =&gt;
+        fn(argsArr)
+
+
+function combineFirstTwo([ v1, v2 ]) {
+  return v1 + v2;
+}
+        
+[1,2,3,4,5].reduce( gatherArgs( combineFirstTwo ) );
+
+</code></pre></div><h3 id="some-now-some-later"><a href="#some-now-some-later" aria-hidden="true" class="header-anchor">#</a> Some Now, Some Later</h3> <h2 id="composing-functions"><a href="#composing-functions" aria-hidden="true" class="header-anchor">#</a> Composing Functions</h2> <p>compose function evolution</p> <div class="language- extra-class"><pre class="language-text"><code>function compose(fn1, fn2) {
+  return composed(value) {
+    return fn1(fn2(value))
+  }
+}
+</code></pre></div><p>self defined compose function we could call it right-partial</p> <div class="language- extra-class"><pre class="language-text"><code>var compose =
+  (...fns) =&gt; 
+    result =&gt; {
+      var list = [...fns]
+      while(list.length &gt; 0) {
+        result = list.pop()(result)
+      }
+      return result
+    }
+
+function a(value) {
+  return value + '1'
+}
+
+function b(value) {
+  return value + '2'
+}
+
+function c(value) {
+  return value + '3'
+}
+
+var test2 = compose(a, b, c)
+
+test2(0)
+</code></pre></div><p>composition is helpful even if there's only one occurrence of something</p> <h2 id="reduce-side-effect"><a href="#reduce-side-effect" aria-hidden="true" class="header-anchor">#</a> reduce side effect</h2> <h3 id="value-immutability"><a href="#value-immutability" aria-hidden="true" class="header-anchor">#</a> value immutability</h3> <div class="language- extra-class"><pre class="language-text"><code>var s = new String('3333')
+
+value immutability does not mean we can't have values change over the course of our program.
+</code></pre></div><p>对待对象时，我们可以采用 复制 而不是 改变这个对象</p> <div class="language- extra-class"><pre class="language-text"><code>function updateLastLogin(user) {
+  var newUserRecord = Object.assign({}, user)
+  newUserRecord.lastLogin = Date.now()
+  return newUserRecord
+}
+
+var user = {
+  //...
+}
+
+user = updateLastLogin(user)
+
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>var arr = [1,2,3];
+
+foo( arr );
+
+console.log( arr[0] )
+
+&lt;!-- protect ourselves from a value being mutated --&gt;
+
+var arr = [1,2,3];
+
+foo( [...arr] );         // ha! a copy!
+
+console.log( arr[0] );      // 1
+
+</code></pre></div><p>第二种方式来避免Reassignment的方式</p> <div class="language- extra-class"><pre class="language-text"><code>const x = 3
+x = 5
+
+出现一种特殊情况 
+const arr = [0]
+arr[4] = 5
+
+const 无法改变这种情况 java中使用final来解决这种情况，作为代码规范而言，你打算变化的变量使用 var或者let。不变的使用const,实际上const只是不可变的一种标志。
+</code></pre></div><p>针对数组出现的这种情况 我们可以使用concat</p> <div class="language- extra-class"><pre class="language-text"><code>const magicNums = [1,2,3]
+magicNums = magicNums.concat(2)
+</code></pre></div><p>第三种 使用freeze</p> <div class="language- extra-class"><pre class="language-text"><code>var obj = Object.freeze([2]) // freeze是唯一一个 将对象和数组变为 read-only的
+
+var test = Object.freeze( [ 2, 3, [4, 5] ] );
+
+// not allowed:
+test[0] = 42;
+
+// oops, still allowed:
+test[2][0] = 42;
+</code></pre></div><h3 id="和性能相关"><a href="#和性能相关" aria-hidden="true" class="header-anchor">#</a> 和性能相关</h3> <p>每次都给一个数组重新分配内存空间是比较耗费cpu性能的，并且会占用额外的内存，旧数据也会被垃圾回收，也增加了cpu的开销。
+immutable.js</p> <h3 id="如何对待呢"><a href="#如何对待呢" aria-hidden="true" class="header-anchor">#</a> 如何对待呢</h3> <div class="language- extra-class"><pre class="language-text"><code>function compose(...fns) {
+    return function composed(result){
+        // copy the array of functions
+        var list = [...fns];
+
+        while (list.length &gt; 0) {
+            // take the last function off the end of the list
+            // and execute it
+            result = list.pop()( result );
+        }
+
+        return result;
+    };
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>function compose(...fns) {
+  return function composed(result){
+  var list = [...fns]
+
+      while (list.length &gt; 0) {
+          // take the last function off the end of the list
+          // and execute it
+          result = list.pop()( result );
+      }
+
+      return result;
+  };
+}
+
+var f = compose( x =&gt; x / 3, x =&gt; x + 1, x =&gt; x * 2 );
+
+f( 4 );     // 3
+
+f( 4 );     // 4 &lt;-- uh oh!
+</code></pre></div><h2 id="closure-and-object"><a href="#closure-and-object" aria-hidden="true" class="header-anchor">#</a> closure and Object</h2> <p>Closures are a poor man's object hhh</p> <h2 id="memoization"><a href="#memoization" aria-hidden="true" class="header-anchor">#</a> Memoization</h2> <div class="language- extra-class"><pre class="language-text"><code></code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">4/28/2019, 4:39:48 PM</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/quard/assets/js/app.eee176bf.js" defer></script><script src="/quard/assets/js/9.21eda8bb.js" defer></script>
+  </body>
+</html>
